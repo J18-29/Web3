@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesania Artesana - Edicion Exclusiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <!-- Logo a la izquierda -->
+        <div class="logo-container">
+            <img src="img/logo2.png" alt="Artesania Artesana Logo" class="logo-img" onerror="this.style.display='none'">
+        </div>
+        
+        <!-- Bloque derecho con Menu y Selector de Idioma -->
+        <div class="header-right">
+            <nav>
+                <a href="#" data-es="Inicio" data-en="Home" id="navHome">Inicio</a>
+                <a href="#catalogo" data-es="Catalogo" data-en="Catalog" id="navCatalog">Catalogo</a>
+                <a href="#" data-es="Ceramica" data-en="Ceramics" id="navCeramics">Ceramica</a>
+                <a href="#" data-es="Metal" data-en="Metal" id="navMetal">Metal</a>
+                <a href="#" data-es="Madera" data-en="Wood" id="navWood">Madera</a>
+                <a href="#" data-es="Contacto" data-en="Contact" id="navContact">Contacto</a>
+            </nav>
+
+            <div class="lang-selector">
+                <select id="languageSelect" onchange="changeLanguage()">
+                    <option value="es">Espanol</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 id="heroTitle">El Arte de la Materia y la Tradicion Viva</h1>
+        <p id="heroText">Una coleccion comisariada de piezas irrepetibles, elaboradas a mano mediante tecnicas centenarias reinterpretadas con vision contemporanea.</p>
+        <!-- Botón funcional que lleva al catálogo -->
+        <a href="#catalogo" class="btn" id="heroBtn" onclick="mostrarCatalogo(event)">Explorar Catalogo</a>
+    </section>
+
+    <!-- Sección de características / categorías -->
+    <div class="features">
+        <div class="feature-box">
+            <img src="img/ceramica.jpg" alt="Ceramica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f1Title">Ceramica</h3>
+                <p id="f1Text">Vasijas y menaje de autor modelados con texturas organicas y acabados unicos.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <img src="img/metal.jpg" alt="Metal y Forja" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f2Title">Metal y Forja</h3>
+                <p id="f2Text">Fundicion de alta precision y forja artesanal aplicada al diseno estructural.</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <img src="img/madera.jpg" alt="Madera y Etnica" class="feature-img" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80'">
+            <div class="feature-content">
+                <h3 id="f3Title">Madera y Etnica</h3>
+                <p id="f3Text">Mobiliario de maderas nobles y elementos decorativos de inspiracion global.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nueva sección interactiva de catálogo que se activa -->
+    <section id="catalogo" class="catalog-section">
+        <h2 id="catalogTitle">Coleccion Destacada 2026</h2>
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=400&q=80" alt="Pieza 1">
+                <h4>Vasija Minimalista Terra</h4>
+                <p>Edicion limitada de ceramica texturizada.</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=400&q=80" alt="Pieza 2">
+                <h4>Escultura en Forja</h4>
+                <p>Pieza unica de metal estructurado a mano.</p>
+            </div>
+            <div class="catalog-item">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=80" alt="Pieza 3">
+                <h4>Banco de Roble Sostenible</h4>
+                <p>Madera noble con acabados naturales al aceite.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footerText">&copy; 2026 Artesania Artesana. Todos los derechos reservados.</p>
+        <p>Diseno Editorial Exclusivo</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

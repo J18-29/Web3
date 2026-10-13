@@ -1,10 +1,10 @@
 :root {
-    --bg-light: #FFFFFF;
-    --bg-card: #FAFAFA;
-    --gold-accent: #914D35; /* O un tono dorado/cobre elegante como #B08246 */
-    --text-dark: #1A1A1A;
-    --text-muted: #666666;
-    --border-color: #E5E5E5;
+    --bg-light: #F6F4EE;        /* Tono marfil/lino cálido mucho más elegante */
+    --bg-card: #FFFFFF;         /* Blanco para destacar tarjetas */
+    --gold-accent: #914D35;     /* Tono terracota/cobre artesanal */
+    --text-dark: #2A2824;       /* Negro cálido/marrón muy oscuro */
+    --text-muted: #6E6A63;
+    --border-color: #E2DDD3;    /* Bordes suaves */
 }
 
 body {
@@ -16,10 +16,10 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Header Editorial */
+/* Header Ajustado con Tono Cálido y Logo Proporcionado */
 header {
     background-color: var(--bg-light);
-    padding: 20px 60px;
+    padding: 12px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,16 +27,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    min-height: 70px; /* Garantiza espacio suficiente para el logo */
 }
 
 .logo-container {
-    height: 45px;
     display: flex;
     align-items: center;
+    height: 60px; /* Ampliamos espacio vertical */
 }
 
 .logo-img {
-    height: 90px;
+    height: 100%; /* Aprovecha la altura disponible sin deformarse */
+    max-height: 58px;
     width: auto;
     object-fit: contain;
 }
@@ -44,22 +46,23 @@ header {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 35px;
 }
 
 .main-nav {
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: center;
 }
 
 .main-nav > a, .dropbtn {
     text-decoration: none;
     color: var(--text-dark);
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
     background: none;
     border: none;
     cursor: pointer;
@@ -158,9 +161,8 @@ header {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(246, 244, 238, 0.82), rgba(246, 244, 238, 0.82)), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
 }
-
 .hero-content {
     max-width: 800px;
 }

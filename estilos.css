@@ -19,7 +19,7 @@ body {
 /* Header Ajustado con Tono Cálido y Logo Proporcionado */
 header {
     background-color: var(--bg-light);
-    padding: 12px 50px;
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,22 +27,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    min-height: 70px; /* Garantiza espacio suficiente para el logo */
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    height: 60px; /* Ampliamos espacio vertical */
 }
 
 .logo-img {
-    height: 100%; /* Aprovecha la altura disponible sin deformarse */
-    max-height: 58px;
+    height: 90px; /* Aumentamos el tamaño de forma fija para que tenga presencia */
     width: auto;
     object-fit: contain;
 }
-
 .header-right {
     display: flex;
     align-items: center;

@@ -1,16 +1,16 @@
 :root {
-    --bg-dark: #121210;
-    --bg-card: #1C1C19;
-    --gold-accent: #C5A880;
-    --text-light: #EAE5D9;
-    --text-muted: #9E9A8E;
-    --border-color: #33322C;
+    --bg-light: #FFFFFF;
+    --bg-card: #FAFAFA;
+    --gold-accent: #914D35; /* O un tono dorado/cobre elegante como #B08246 */
+    --text-dark: #1A1A1A;
+    --text-muted: #666666;
+    --border-color: #E5E5E5;
 }
 
 body {
     font-family: 'Times New Roman', Times, serif, 'Segoe UI';
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -18,7 +18,7 @@ body {
 
 /* Header Editorial */
 header {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-light);
     padding: 20px 60px;
     display: flex;
     justify-content: space-between;
@@ -55,7 +55,7 @@ header {
 
 .main-nav > a, .dropbtn {
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 14px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -79,16 +79,16 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: var(--bg-card);
+    background-color: var(--bg-light);
     min-width: 210px;
     border: 1px solid var(--border-color);
     top: 100%;
     left: 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .dropdown-content a {
-    color: var(--text-light);
+    color: var(--text-dark);
     padding: 12px 18px;
     text-decoration: none;
     display: block;
@@ -98,7 +98,7 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: var(--border-color);
+    background-color: var(--bg-card);
     color: var(--gold-accent);
 }
 
@@ -107,7 +107,7 @@ header {
 }
 
 .dropdown-sub > span {
-    color: var(--text-light);
+    color: var(--text-dark);
     padding: 12px 18px;
     display: block;
     font-size: 13px;
@@ -116,7 +116,7 @@ header {
 }
 
 .dropdown-sub:hover > span {
-    background-color: var(--border-color);
+    background-color: var(--bg-card);
     color: var(--gold-accent);
 }
 
@@ -125,9 +125,10 @@ header {
     position: absolute;
     left: 100%;
     top: 0;
-    background-color: var(--bg-card);
+    background-color: var(--bg-light);
     min-width: 180px;
     border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .dropdown:hover .dropdown-content {
@@ -140,8 +141,8 @@ header {
 
 /* Selector de Idioma */
 .lang-selector select {
-    background: transparent;
-    color: var(--text-light);
+    background: var(--bg-light);
+    color: var(--text-dark);
     border: 1px solid var(--border-color);
     padding: 6px 12px;
     font-size: 13px;
@@ -149,19 +150,15 @@ header {
     font-family: 'Segoe UI', sans-serif;
 }
 
-.lang-selector select option {
-    background-color: var(--bg-dark);
-}
-
-/* Hero Editorial */
+/* Hero Editorial Luminoso */
 .hero {
-    height: 80vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(rgba(18, 18, 16, 0.75), rgba(18, 18, 16, 0.75)), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
 }
 
 .hero-content {
@@ -175,6 +172,7 @@ header {
     color: var(--gold-accent);
     margin-bottom: 20px;
     display: block;
+    font-weight: 600;
 }
 
 .hero h1 {
@@ -182,6 +180,7 @@ header {
     font-weight: normal;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: var(--text-dark);
 }
 
 .hero p {
@@ -195,8 +194,8 @@ header {
 .btn {
     display: inline-block;
     padding: 14px 32px;
-    border: 1px solid var(--gold-accent);
-    color: var(--gold-accent);
+    border: 1px solid var(--text-dark);
+    color: var(--text-dark);
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
     font-size: 13px;
@@ -206,13 +205,13 @@ header {
 }
 
 .btn:hover {
-    background-color: var(--gold-accent);
-    color: var(--bg-dark);
+    background-color: var(--text-dark);
+    color: var(--bg-light);
 }
 
 /* Catálogo Estilo Galería */
 .catalog-section {
-    padding: 100px 60px;
+    padding: 90px 60px;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -253,8 +252,9 @@ header {
 }
 
 .filter-btn:hover, .filter-btn.active {
-    border-color: var(--gold-accent);
-    color: var(--gold-accent);
+    border-color: var(--text-dark);
+    color: var(--text-dark);
+    background-color: var(--bg-card);
 }
 
 .gallery-grid {
@@ -266,12 +266,13 @@ header {
 .gallery-item {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    transition: transform 0.4s;
+    transition: transform 0.4s, box-shadow 0.4s;
     overflow: hidden;
 }
 
 .gallery-item:hover {
     transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
 }
 
 .img-wrapper {
@@ -302,12 +303,14 @@ header {
     color: var(--gold-accent);
     display: block;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .gallery-details h3 {
     font-size: 22px;
     font-weight: normal;
     margin: 0 0 10px 0;
+    color: var(--text-dark);
 }
 
 .gallery-details p {
@@ -351,7 +354,7 @@ header {
     list-style: none;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .contact-details-list li {
@@ -370,6 +373,7 @@ footer {
     padding: 40px;
     text-align: center;
     border-top: 1px solid var(--border-color);
+    background-color: var(--bg-light);
     font-family: 'Segoe UI', sans-serif;
     color: var(--text-muted);
     font-size: 13px;
@@ -382,6 +386,7 @@ footer {
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 /* Responsive */
